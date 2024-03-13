@@ -1,0 +1,176 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "OpenAPI",
+      "version": "1.0",
+      "description": "API UNTUK MENGATUR DATA MAHASISWA",
+      "contact": {
+        "name" : "Kelompok 2",
+        "url": "https://github.com/22091397013MiftakhDamarFaizin/Latihan-API"
+      }
+    },
+    "servers": [
+        {
+          "url": "http://localhost:8000/v1"
+        }
+      ],
+    "paths": {
+      "/mahasiswa": {
+        "get": {
+          "summary": "Menampilkan Data Mahasiswa",
+          "responses": {
+            "200": {
+              "description": "Successful",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "data": [
+                      {
+                        "NIM": "1",
+                        "Nama": "Bagus",
+                        "Prodi": "Manajemen Informatika"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "summary": "Menambahkan Data Mahasiswa",
+          "requestBody": {
+            "content": {
+              "application/x-www-form-urlencoded": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "NIM": {
+                      "type": "integer"
+                    },
+                    "Nama": {
+                      "type": "string"
+                    },
+                    "Prodi": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["NIM", "Nama", "Prodi"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "status": "OK",
+                    "message": "Data berhasil ditambahkan."
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "status": "Error",
+                    "message": "Gagal menambahkan data: Invalid input."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "summary": "Merubah Data Mahasiswa",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "NIM": {
+                      "type": "integer"
+                    },
+                    "Nama": {
+                      "type": "string"
+                    },
+                    "Prodi": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["NIM", "Nama", "Prodi"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "status": "OK",
+                    "message": "Data berhasil diperbarui."
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "status": "Error",
+                    "message": "Gagal memperbarui data: Invalid input."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "summary": "Menghapus Data Mahasiswa",
+          "parameters": [
+            {
+              "name": "NIM",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "status": "OK",
+                    "message": "Data berhasil dihapus."
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "status": "Error",
+                    "message": "Gagal menghapus data: Invalid input."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
