@@ -1,7 +1,7 @@
-# Latihan-API
+# Dokumentasi OpenAPI
 
-MIFTAKH DAMAR FAIZIN (22091397013) : https://github.com/22091397013MiftakhDamarFaizin/Latihan-API
-AYYUB FARABY PRAGOLO PRAGOLO (22091397003) : https://github.com/22091397013MiftakhDamarFaizin/Latihan-API (as a collabolator)
+AYYUB FARABY PRAGOLO PRAGOLO (22091397003)
+MIFTAKH DAMAR FAIZIN (22091397013) 
 
 DOKUMENTASI :
 
