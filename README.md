@@ -4,7 +4,7 @@ AYYUB FARABY PRAGOLO (22091397003)
 
 MIFTAKH DAMAR FAIZIN (22091397013) 
 
-GitHub: https://github.com/22091397013MiftakhDamarFaizin/Latihan-API/blob/main/README.md
+GitHub: https://github.com/22091397013MiftakhDamarFaizin/Latihan-API
 
 
 DOKUMENTASI :
